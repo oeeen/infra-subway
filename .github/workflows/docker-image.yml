@@ -21,7 +21,6 @@ jobs:
       - name: Docker build
         run: |
           docker build --build-arg JAR_FILE=build/libs/\*.jar -t oeeen/infra-subway:latest .
-          docker build -t oeeen/infra-subway .
       - name: Dockerhub push
         run: |
           docker login -u ${{secrets.DOCKER_USER_NAME}} --password ${{secrets.DOCKER_USER_PASSWORD}}
