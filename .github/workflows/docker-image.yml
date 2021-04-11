@@ -28,4 +28,4 @@ jobs:
           docker build --build-arg JAR_FILE=build/libs/\*.jar -t oeeen/infra-subway:latest .
       - name: Dockerhub push
         run: |
-          docker push oeeen/infra-subway:latest .
+          docker push oeeen/infra-subway:latest
