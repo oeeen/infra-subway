@@ -1,8 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <configuration debug="false">
 
-    <property name="LOG_PATH" value="log/subway/log" />
-    <property name="LOG_FILE" value="subway" />
+    <property name="LOG_PATH" value="/var/log/subway" />
     <!--spring boot의 기본 logback base.xml은 그대로 가져간다.-->
+    <springProfile name="local">
+        <property name="LOG_PATH" value="log/subway/log" />
+    </springProfile>
     <include resource="org/springframework/boot/logging/logback/base.xml" />
     <include resource="file-appender.xml" />
     <include resource="console-appender.xml" />
