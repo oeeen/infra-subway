@@ -1,6 +1,6 @@
 <configuration debug="false">
 
-    <property name="logFilePath" value="/var/log/subway" />
+    <property name="logFilePath" value="/home/ubuntu/nextstep/log/subway" />
     <property name="logFileName" value="subway.log" />
     <!--spring boot의 기본 logback base.xml은 그대로 가져간다.-->
     <include resource="org/springframework/boot/logging/logback/base.xml" />
